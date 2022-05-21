@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const UseStateBasics = () => {
-  return <h2>useState basic example</h2>;
+  const [text, setText] = useState("random title");
+  const handleClick = () => {
+    setText("Hello world");
+  };
+  return (
+    <React.Fragment>
+      <h2>{text}</h2>;<button onClick={handleClick}>change Title</button>
+    </React.Fragment>
+  );
 };
 
 export default UseStateBasics;
